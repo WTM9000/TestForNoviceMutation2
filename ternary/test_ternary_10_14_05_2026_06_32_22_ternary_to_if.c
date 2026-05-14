@@ -1,0 +1,13 @@
+#include <stdio.h>
+int double_it(int x) { return x * 2; }
+int halve_it(int x) { return x / 2; }
+int main() {
+    int x = 6;
+    if (x % 2 == 0) {
+        int result = double_it(x);
+    } else {
+        int result = halve_it(x);
+    }
+    printf("%d\n", result);
+    return 0;
+}
