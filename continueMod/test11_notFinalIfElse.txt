@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+// Test: basic if / else if / else inside a while loop
+// Expected mutation: inverted guards with nested continue pattern
+int main(void) {
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = 5;
+    int i = 0;
+
+    while (i < n) {
+        int x = arr[i];
+        i++;
+
+        if (x == 1)
+            printf("one\n");
+        else if (x == 2)
+            printf("two\n");
+        else
+            printf("other\n");
+			
+		i++;
+    }
+
+    return 0;
+}
